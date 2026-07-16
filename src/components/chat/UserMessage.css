@@ -1,0 +1,31 @@
+/* src/components/chat/UserMessage.css */
+
+.user-message-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-message-bubble {
+  max-width: 70%;
+  background: #0066A1;
+  border-radius: 18px 18px 4px 18px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-message-text {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.user-message-time {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  align-self: flex-end;
+}

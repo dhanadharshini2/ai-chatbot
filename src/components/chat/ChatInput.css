@@ -1,0 +1,121 @@
+/* src/components/chat/ChatInput.css */
+
+.chat-input-area {
+  padding: 12px 24px 16px;
+  background: #0f1319;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.chat-input-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 10px 12px;
+  transition: border-color 0.15s ease;
+}
+
+.chat-input-wrapper:focus-within {
+  border-color: rgba(0, 153, 204, 0.45);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.chat-input-textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  resize: none;
+  max-height: 180px;
+  min-height: 22px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+.chat-input-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.chat-input-textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.chat-input-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Send / Stop buttons */
+.chat-input-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+  flex-shrink: 0;
+}
+
+.chat-input-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.chat-input-btn--send {
+  background: #0066A1;
+  color: white;
+}
+
+.chat-input-btn--send:hover {
+  background: #0080c7;
+  transform: scale(1.05);
+}
+
+.chat-input-btn--send:active {
+  transform: scale(0.97);
+}
+
+.chat-input-btn--cancel {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  animation: pulse-border 1.5s ease-in-out infinite;
+}
+
+.chat-input-btn--cancel:hover {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.chat-input-btn--disabled {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: rgba(239, 68, 68, 0.25); }
+  50% { border-color: rgba(239, 68, 68, 0.55); }
+}
+
+.chat-input-hint {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin: 0;
+}
